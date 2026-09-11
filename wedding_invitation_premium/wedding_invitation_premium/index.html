@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#d6ad47">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Саидамир & Махинахон — Свадебное приглашение</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <audio id="bgMusic" loop>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<button class="music-btn" onclick="toggleMusic()">
+    🎵
+</button>
+
+  <div class="preloader" id="preloader">
+    <div class="preloader-card">
+      <div class="mono">S <span>♥</span> M</div>
+      <p>22 • 07 • 2026</p>
+    </div>
+  </div>
+
+  <div class="floating-elements" aria-hidden="true">
+    <span class="petal p1">❦</span>
+    <span class="petal p2">✦</span>
+    <span class="petal p3">❦</span>
+    <span class="petal p4">✧</span>
+    <span class="petal p5">❦</span>
+    <span class="butterfly b1">🦋</span>
+    <span class="butterfly b2">🦋</span>
+    <span class="butterfly b3">🦋</span>
+  </div>
+
+  <section class="cover" id="cover">
+    <div class="cover-glass">
+      <p class="small-gold">Приглашение на свадьбу</p>
+
+      <div class="envelope-box" onclick="openInvite()">
+        <div class="letter-card">
+          <div class="letter-top">Wedding Invitation</div>
+          <div class="letter-names">S & M</div>
+        </div>
+
+        <div class="envelope">
+          <div class="env-back"></div>
+          <div class="env-left"></div>
+          <div class="env-right"></div>
+          <div class="env-bottom"></div>
+          <div class="env-flap"></div>
+          <div class="seal">♥</div>
+        </div>
+      </div>
+
+      <h1 class="cover-title">Саидамир <span>&</span> Махинахон</h1>
+      <p class="tap-text">Нажмите на конверт, чтобы открыть</p>
+    </div>
+  </section>
+
+  <main id="invite">
+
+    <section class="screen hero">
+      <div class="silk"></div>
+      <div class="ornament">✦</div>
+      <p class="small-gold reveal">Свадебное торжество</p>
+      <h1 class="main-names reveal">Саидамир <span>&</span> Махинахон</h1>
+      <p class="hero-date reveal">22 июля 2026 • 19:00</p>
+      <div class="gold-line reveal"></div>
+      <p class="scroll-note reveal">листайте вниз</p>
+    </section>
+
+    <section class="screen">
+      <div class="premium-card reveal">
+        <div class="corner c1"></div>
+        <div class="corner c2"></div>
+        <h2>Дорогие гости!</h2>
+        <p>
+          С большой радостью приглашаем вас разделить с нами
+          один из самых красивых и важных дней нашей жизни —
+          день создания нашей семьи.
+        </p>
+        <p>
+          Ваше присутствие наполнит этот вечер теплом,
+          улыбками и незабываемыми воспоминаниями.
+        </p>
+      </div>
+    </section>
+
+    <section class="screen">
+      <div class="premium-card calendar-card reveal">
+        <p class="small-gold">Дата торжества</p>
+        <h2>Июль 2026</h2>
+
+        <div class="calendar">
+          <div class="week">
+            <b>Пн</b><b>Вт</b><b>Ср</b><b>Чт</b><b>Пт</b><b>Сб</b><b>Вс</b>
+          </div>
+
+          <div class="days">
+            <span></span><span></span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span>
+            <span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span>
+            <span>13</span><span>14</span><span>15</span><span>16</span><span>17</span><span>18</span><span>19</span>
+            <span>20</span><span>21</span><span class="wedding-day">22 <em>♥</em></span><span>23</span><span>24</span><span>25</span><span>26</span>
+            <span>27</span><span>28</span><span>29</span><span>30</span><span>31</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen">
+      <div class="premium-card details reveal">
+        <p class="small-gold">Место проведения</p>
+        <h2>Ресторан “Шохон”</h2>
+
+        <div class="detail-row">
+          <span>⏰</span>
+          <p><b>Время</b><br>19:00</p>
+        </div>
+
+        <div class="detail-row">
+          <span>📍</span>
+          <p><b>Адрес</b><br>г. Канибадам, ул. Камоли Хучанди</p>
+        </div>
+
+        <a class="gold-button" href="https://maps.app.goo.gl/aeJETcBqBtyraVUN7?g_st=ac" target="_blank">
+          Открыть карту
+        </a>
+      </div>
+    </section>
+
+    <section class="screen">
+      <div class="premium-card timer-card reveal">
+        <p class="small-gold">До свадьбы осталось</p>
+        <h2>Мы ждём этот день</h2>
+        <div id="timer" class="timer">
+          <div><b>0</b><span>дней</span></div>
+          <div><b>0</b><span>часов</span></div>
+          <div><b>0</b><span>минут</span></div>
+          <div><b>0</b><span>секунд</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen final-screen">
+      <div class="final-card reveal">
+        <div class="mono big">S <span>♥</span> M</div>
+        <h2>Будем рады видеть вас!</h2>
+        <p>С любовью, Саидамир и Махинахон</p>
+        <button onclick="confirmGuest()">Я приду ♥</button>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
